@@ -1,0 +1,22 @@
+INSERT INTO vendors(name) VALUES ('shilla'), ('mr.sib');
+
+INSERT INTO orders(vendor_id, user_id, delivery_time, delivery_at) VALUES 
+(1, 20, 50, NOW() + INTERVAL FLOOR(50 * 60) MINUTE),
+(2, 25, 30, NOW() + INTERVAL FLOOR(30 * 60) MINUTE),
+(2, 1, 20, NOW() + INTERVAL FLOOR(20 * 60) MINUTE),
+(1, 2, 10, NOW() + INTERVAL FLOOR(10 * 60) MINUTE),
+(1, 3, 60, NOW() + INTERVAL FLOOR(60 * 60) MINUTE),
+(2, 4, 45, NOW() + INTERVAL FLOOR(45 * 60) MINUTE),
+(2, 5, 33, NOW() + INTERVAL FLOOR(33 * 60) MINUTE),
+(2, 7, 33, NOW() + INTERVAL FLOOR(33 * 60) MINUTE),
+(2, 52, 33, NOW() + INTERVAL FLOOR(33 * 60) MINUTE),
+(2, 33, 33, NOW() + INTERVAL FLOOR(33 * 60) MINUTE),
+(2, 37, 33, NOW() + INTERVAL FLOOR(33 * 60) MINUTE),
+(2, 58, 33, NOW() + INTERVAL FLOOR(33 * 60) MINUTE),
+(1, 6, 71, NOW() + INTERVAL FLOOR(17 * 60) MINUTE);
+
+INSERT INTO trips(assignee_id, order_id, status) VALUES
+(10, 1, 'DELIVERED'),
+(20, 2, 'AT_VENDOR'),
+(3, 3, 'PICKED'),
+(15, 4, 'ASSIGNED');
